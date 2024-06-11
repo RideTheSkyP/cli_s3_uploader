@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cli_s3_uploader"
+version = "0.1.0"
+description = "A CLI utility to upload files from a zip archive to an S3 bucket with defined concurrency."
+authors = [""]
+
+[tool.poetry.scripts]
+s3_uploader = "cli_s3_uploader.s3_uploader:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.34.119"
+logging = "^0.4.9.6"
+requests = "^2.32.3"
+argparse = "^1.4.0"
+
+[tool.poetry.dev-dependencies]
+    pytest = "^6.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
